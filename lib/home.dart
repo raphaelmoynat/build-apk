@@ -4,6 +4,8 @@ import 'register.dart';
 import 'login.dart';
 import 'friendship.dart';
 import 'podcast.dart';
+import 'history.dart';
+import 'recommendations.dart';
 
 final storage = FlutterSecureStorage();
 
@@ -92,6 +94,23 @@ class _HomePageState extends State<HomePage> {
                 MaterialPageRoute(builder: (_) => const PodcastSearchPage()),
               ),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              label: const Text('Mon historique'),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const HistoryPage()),
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              label: const Text('Mes recommandations'),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const RecommendationsPage()),
+              ),
+            ),
+
 
           ],
         )
